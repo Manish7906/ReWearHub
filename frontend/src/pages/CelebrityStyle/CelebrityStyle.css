@@ -1,0 +1,146 @@
+.celeb-page { padding-top: 108px; }
+
+/* Hero */
+.celeb-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+  padding: 48px 0 40px;
+  overflow: hidden;
+}
+.celeb-hero__inner {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 32px; align-items: center;
+}
+.celeb-hero__content { display: flex; flex-direction: column; gap: 14px; }
+.celeb-hero__content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900;
+  color: white; line-height: 1.2;
+}
+.celeb-hero__content h1 span { color: #f39c12; }
+.celeb-hero__content p { color: rgba(255,255,255,0.7); max-width: 480px; line-height: 1.6; }
+.celeb-hero__stats {
+  display: flex; gap: 28px; padding-top: 8px;
+}
+.celeb-hero__stats div { display: flex; flex-direction: column; gap: 2px; }
+.celeb-hero__stats strong { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 900; color: #f43397; }
+.celeb-hero__stats span { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; }
+.celeb-hero__img { position: relative; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.celeb-hero__glow {
+  position: absolute; width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(244,51,151,0.4), transparent);
+  border-radius: 50%;
+}
+.celeb-hero__big-emoji { font-size: 6rem; position: relative; z-index: 1; }
+
+/* Content */
+.celeb-content { padding: 36px 0 48px; display: flex; flex-direction: column; gap: 32px; }
+
+/* Look Cards */
+.celeb-looks-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.celeb-look-card {
+  background: white; border-radius: 18px;
+  overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  cursor: pointer; transition: all 0.25s;
+  border: 2px solid transparent;
+}
+.celeb-look-card:hover { box-shadow: 0 8px 24px rgba(244,51,151,0.15); transform: translateY(-4px); }
+.celeb-look-card.selected { border-color: #f43397; box-shadow: 0 8px 24px rgba(244,51,151,0.25); }
+
+.celeb-look-card__img-wrap { position: relative; overflow: hidden; aspect-ratio: 16/10; }
+.celeb-look-card__img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.celeb-look-card:hover .celeb-look-card__img-wrap img { transform: scale(1.05); }
+.celeb-look-card__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,26,46,0.7), transparent);
+  display: flex; align-items: flex-end; padding: 16px;
+  opacity: 0; transition: opacity 0.2s;
+}
+.celeb-look-card:hover .celeb-look-card__overlay { opacity: 1; }
+.celeb-look-card.selected .celeb-look-card__overlay { opacity: 1; }
+.celeb-look-card__view {
+  background: white; color: #f43397;
+  border: none; border-radius: 50px;
+  padding: 7px 16px; font-size: 0.8rem; font-weight: 800;
+}
+.celeb-look-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.celeb-look-card__top { display: flex; justify-content: space-between; align-items: center; }
+.celeb-look-card__price { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 800; color: #f43397; }
+.celeb-look-card__price small { font-size: 0.7rem; color: #9b9bb4; font-weight: 600; }
+.celeb-look-card__body h3 { font-size: 1rem; font-weight: 800; color: #1a1a2e; }
+.celeb-look-card__body p { font-size: 0.83rem; color: #5a5a7a; line-height: 1.5; }
+.celeb-look-card__footer { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Outfit Set Panel */
+.outfit-set-panel {
+  background: white; border-radius: 20px;
+  padding: 28px; box-shadow: 0 4px 20px rgba(244,51,151,0.12);
+  border: 2px solid #fde8f3;
+  animation: fadeUp 0.3s ease;
+}
+.outfit-set-panel__header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 1px solid #f0e6f6;
+}
+.outfit-set-panel__header h2 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 800; }
+.outfit-set-panel__header p { font-size: 0.85rem; color: #9b9bb4; margin-top: 4px; }
+.outfit-close {
+  background: #f8f4f9; border: none;
+  padding: 7px 14px; border-radius: 50px;
+  font-size: 0.8rem; font-weight: 700; color: #5a5a7a;
+  transition: all 0.2s;
+}
+.outfit-close:hover { background: #fde8f3; color: #f43397; }
+
+.outfit-pieces { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.outfit-piece {
+  border-radius: 14px; overflow: hidden;
+  border: 1.5px solid #f0e6f6;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.outfit-piece:hover { border-color: #f43397; }
+.outfit-piece img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.outfit-piece__info { padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+.outfit-piece__cat { font-size: 0.7rem; font-weight: 800; color: #9b59b6; text-transform: uppercase; }
+.outfit-piece__info h4 { font-size: 0.9rem; font-weight: 800; color: #1a1a2e; }
+.outfit-piece__info p { font-size: 0.8rem; color: #5a5a7a; line-height: 1.4; }
+.outfit-piece__footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+.outfit-piece__price { font-weight: 800; color: #f43397; font-size: 0.9rem; }
+.outfit-piece__deposit { font-size: 0.72rem; color: #9b9bb4; display: block; }
+
+.outfit-set-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 20px; border-top: 1px solid #f0e6f6;
+}
+.outfit-set-footer__price { display: flex; flex-direction: column; }
+.outfit-set-footer__price span { font-size: 0.82rem; color: #9b9bb4; }
+.outfit-set-footer__price strong { font-family: 'Poppins', sans-serif; font-size: 1.6rem; font-weight: 900; color: #f43397; }
+
+/* Tips */
+.celeb-tips {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.celeb-tip {
+  background: white; border-radius: 14px; padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+.celeb-tip:hover { box-shadow: 0 6px 18px rgba(244,51,151,0.12); transform: translateY(-2px); }
+.celeb-tip__icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.celeb-tip h4 { font-size: 0.9rem; font-weight: 800; margin-bottom: 6px; }
+.celeb-tip p { font-size: 0.8rem; color: #5a5a7a; line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .celeb-looks-grid { grid-template-columns: 1fr 1fr; }
+  .celeb-tips { grid-template-columns: 1fr 1fr; }
+  .celeb-hero__img { display: none; }
+}
+@media (max-width: 600px) {
+  .celeb-looks-grid { grid-template-columns: 1fr; }
+  .celeb-tips { grid-template-columns: 1fr 1fr; }
+  .outfit-set-footer { flex-direction: column; gap: 16px; }
+}

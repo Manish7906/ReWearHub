@@ -1,0 +1,138 @@
+.dash-page { padding-top: 108px; min-height: 100vh; background: #f8f4f9; }
+
+/* Header */
+.dash-header {
+  background: linear-gradient(135deg, #f43397 0%, #9b59b6 100%);
+  padding: 32px 0 0;
+}
+.dash-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap; padding-bottom: 24px;
+}
+.dash-profile { display: flex; align-items: center; gap: 16px; }
+.dash-avatar {
+  width: 64px; height: 64px;
+  background: rgba(255,255,255,0.25);
+  color: white; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Poppins', sans-serif; font-size: 1.6rem; font-weight: 900;
+  border: 3px solid rgba(255,255,255,0.4);
+  flex-shrink: 0;
+}
+.dash-profile h1 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 900; color: white; }
+.dash-profile p { color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 2px; }
+.dash-tier {
+  display: inline-block; margin-top: 6px;
+  color: white; font-size: 0.72rem; font-weight: 800;
+  padding: 3px 10px; border-radius: 50px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+.dash-rewards-card {
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 16px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 12px;
+  color: white;
+}
+.dash-rewards-card__icon { font-size: 2rem; }
+.dash-rewards-card strong { font-family: 'Poppins', sans-serif; font-size: 1.6rem; font-weight: 900; display: block; }
+.dash-rewards-card small { font-size: 0.72rem; opacity: 0.7; text-transform: uppercase; }
+.dash-rewards-card__val {
+  margin-left: 8px; background: rgba(255,255,255,0.2);
+  padding: 6px 12px; border-radius: 10px;
+  font-size: 0.82rem; font-weight: 700;
+}
+
+/* Tabs */
+.dash-tabs { display: flex; gap: 0; border-top: 1px solid rgba(255,255,255,0.15); }
+.dash-tab {
+  padding: 13px 20px; background: none; border: none;
+  color: rgba(255,255,255,0.65); font-size: 0.85rem; font-weight: 700;
+  border-bottom: 3px solid transparent; margin-bottom: -1px;
+  transition: all 0.2s; cursor: pointer;
+}
+.dash-tab:hover { color: white; }
+.dash-tab.active { color: white; border-bottom-color: white; }
+
+/* Content */
+.dash-content { padding: 28px 0 60px; display: flex; flex-direction: column; gap: 20px; }
+.dash-section-title { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 800; color: #1a1a2e; }
+
+/* Stats */
+.dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.dash-stat {
+  border-radius: 16px; padding: 22px 16px;
+  text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 6px;
+  transition: transform 0.2s;
+}
+.dash-stat:hover { transform: translateY(-3px); }
+.dash-stat__icon { font-size: 1.8rem; }
+.dash-stat__val { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 900; color: #1a1a2e; }
+.dash-stat__label { font-size: 0.72rem; color: #9b9bb4; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Order cards */
+.order-card {
+  background: white; border-radius: 16px; padding: 16px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+.order-card:hover { box-shadow: 0 4px 16px rgba(244,51,151,0.1); }
+.order-card__img {
+  width: 68px; height: 86px; object-fit: cover;
+  border-radius: 10px; flex-shrink: 0;
+}
+.order-card__info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.order-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.order-card__top h4 { font-size: 0.92rem; font-weight: 800; color: #1a1a2e; }
+.order-card__info p { font-size: 0.82rem; color: #5a5a7a; }
+.order-card__dates { font-size: 0.78rem; color: #9b9bb4; }
+.order-card__addr { font-size: 0.78rem; color: #9b9bb4; }
+.order-card__track { flex-shrink: 0; }
+
+/* Rewards */
+.rewards-section { display: flex; flex-direction: column; gap: 20px; }
+.rewards-balance-card {
+  background: white; border-radius: 18px; padding: 24px;
+  display: flex; align-items: center; gap: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.rewards-balance-card > span { font-size: 3rem; }
+.rewards-balance-card strong { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 900; display: block; }
+.rewards-balance-card small { color: #9b9bb4; font-size: 0.82rem; }
+.rewards-tier-badge {
+  margin-left: auto; color: white;
+  padding: 6px 14px; border-radius: 50px;
+  font-size: 0.82rem; font-weight: 800;
+}
+.earn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.earn-card {
+  background: white; border-radius: 14px; padding: 18px 16px;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+.earn-card:hover { box-shadow: 0 4px 16px rgba(244,51,151,0.1); transform: translateY(-2px); }
+.earn-card > span { font-size: 2rem; }
+.earn-card strong { display: block; font-size: 0.9rem; font-weight: 800; }
+.earn-card small { color: #27ae60; font-size: 0.8rem; font-weight: 800; }
+
+/* Profile */
+.profile-section { display: flex; flex-direction: column; gap: 20px; }
+.profile-form-card {
+  background: white; border-radius: 18px; padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex; flex-direction: column; gap: 18px; max-width: 700px;
+}
+.profile-form-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 800; padding-bottom: 16px; border-bottom: 1px solid #f0e6f6; }
+
+@media (max-width: 900px) { .dash-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .dash-header__inner { flex-direction: column; align-items: flex-start; }
+  .dash-rewards-card { width: 100%; }
+  .dash-tabs { overflow-x: auto; }
+  .earn-grid { grid-template-columns: 1fr; }
+  .order-card__track { display: none; }
+}
