@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌟 ReWear Hub — Fashion Rental Platform
 
 > *Rent stylish outfits, wear celebrity looks, and donate unused clothes — all in one platform.*
@@ -225,3 +226,6 @@ REACT_APP_API_URL=https://api.yoursite.com/api
 ---
 
 *Built with ❤️ — ReWear Hub © 2024*
+=======
+# ReWearHub
+>>>>>>> ab7ee856e751f843feb75b93499cf62d2a5994e7
